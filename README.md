@@ -1,4 +1,1 @@
-# kortti
-# vuosipaiva
-# vuosipaiva
-# vuosipaiva
+
