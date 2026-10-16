@@ -233,14 +233,15 @@ button:focus-visible {
 }
 
 /* Kuvien koko ja rajaus */
+
 .photo-card img {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: auto;
     object-fit: contain;
     border-radius: 7px;
 }
+
 
 /* Kuvatekstit */
 .photo-card figcaption {
@@ -264,7 +265,6 @@ button:focus-visible {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-
     .photo-card figcaption {
         font-size: 1rem;
     }
