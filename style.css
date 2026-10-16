@@ -1,0 +1,275 @@
+
+/* 1. Koko sivun perusasetukset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #160d14;
+    color: #f8e9ed;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* 2. Vuosipäiväkortti */
+.card {
+    width: 100%;
+    max-width: 600px;
+    padding: 48px 28px;
+
+    text-align: center;
+
+    background: #28131f;
+    border: 1px solid #71364f;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 3. Pieni yläteksti */
+.eyebrow {
+    color: #d99aaf;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* 4. Pääotsikko */
+h1 {
+    margin: 24px 0;
+    color: #f2bdcd;
+    font-size: clamp(2rem, 7vw, 3.2rem);
+    font-weight: normal;
+}
+
+/* 5. Tervehdysteksti */
+.message {
+    max-width: 380px;
+    margin: 0 auto;
+    color: #e7d2da;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* 6. Kissat ja sydän */
+.cats {
+    margin: 32px 0;
+    font-size: 3rem;
+}
+
+/* 7. Painike */
+button {
+    padding: 14px 24px;
+
+    background: #8f3658;
+    color: #fff5f7;
+
+    border: 1px solid #c87896;
+    border-radius: 999px;
+
+    font-size: 1rem;
+    font-family: inherit;
+
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #aa456b;
+    transform: translateY(-2px);
+}
+
+button:focus-visible {
+    outline: 3px solid #f2bdcd;
+    outline-offset: 4px;
+}
+
+/* 8. Pienet näytöt */
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .card {
+        padding: 36px 20px;
+        border-radius: 16px;
+    }
+
+    .cats {
+        font-size: 2.5rem;
+    }
+
+    .message {
+        font-size: 1rem;
+    }
+}
+
+
+/* Yhteiset muistot */
+.memories {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid #71364f;
+}
+
+.memories h2 {
+    color: #f2bdcd;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.memory-intro {
+    color: #d9bdca;
+    line-height: 1.7;
+}
+
+.memory-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.memory {
+    padding: 14px;
+    background: #351a2a;
+    border: 1px solid #71364f;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.memory-button {
+    width: 100%;
+    border: none;
+    text-align: left;
+}
+
+.memory-text {
+    margin: 16px 4px 4px;
+    color: #f0dce4;
+    line-height: 1.8;
+}
+
+.memory-text[hidden] {
+    display: none;
+}
+
+
+.our-song {
+    margin-top: 28px;
+    padding: 20px;
+    background: #351a2a;
+    border: 1px solid #71364f;
+    border-radius: 16px;
+    text-align: left;
+}
+
+.our-song h3 {
+    color: #f2bdcd;
+    font-weight: normal;
+}
+
+.our-song p {
+    color: #e7d2da;
+    line-height: 1.7;
+}
+
+.our-song iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
+
+/* Viimeinen osio: kuvagalleria */
+.gallery {
+    margin-top: 52px;
+    padding-top: 32px;
+    border-top: 1px solid #71364f;
+    text-align: center;
+}
+
+.gallery h2 {
+    color: #f2bdcd;
+    font-size: clamp(1.7rem, 5vw, 2.4rem);
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.gallery-intro {
+    max-width: 400px;
+    margin: 0 auto 28px;
+    color: #e7d2da;
+    line-height: 1.8;
+}
+
+/* Kuvien asettelu */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Yksittäinen valokuvakortti */
+.photo-card {
+    min-width: 0;
+    margin: 0;
+    padding: 10px;
+
+    background: #351a2a;
+    border: 1px solid #71364f;
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+/* Kuvien koko ja rajaus */
+.photo-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+
+    border-radius: 7px;
+}
+
+/* Kuvatekstit */
+.photo-card figcaption {
+    padding: 12px 2px 4px;
+    color: #f2bdcd;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.gallery-ending {
+    margin: 32px auto 8px;
+    color: #d99aaf;
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+/* Puhelimen näyttö */
+@media (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .photo-card img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .photo-card figcaption {
+        font-size: 1rem;
+    }
+}
