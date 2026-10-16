@@ -48,6 +48,9 @@ h1 {
     color: #f2bdcd;
     font-size: clamp(2rem, 7vw, 3.2rem);
     font-weight: normal;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    line-height: 1.9;
+
 }
 
 /* 5. Tervehdysteksti */
@@ -57,6 +60,7 @@ h1 {
     color: #e7d2da;
     font-size: 1.1rem;
     line-height: 1.8;
+     font-family: "Cormorant Garamond", Georgia, serif;
 }
 
 /* 6. Kissat ja sydän */
@@ -268,4 +272,16 @@ button:focus-visible {
     .photo-card figcaption {
         font-size: 1rem;
     }
+}
+
+#love-letter {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.2rem;
+    line-height: 1.9;
+}
+
+#love-letter h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
 }
